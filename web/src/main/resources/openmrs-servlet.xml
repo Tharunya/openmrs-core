@@ -160,14 +160,7 @@
 
 				<prop key="admin/observations/obs.form">obsForm</prop>
 				<prop key="admin/observations/personObs.form">personObsForm</prop>
-
-				<prop key="admin/users/role.list">roleList</prop>
-				<prop key="admin/users/role.form">roleForm</prop>
-				<prop key="admin/users/alert.list">alertList</prop>
-				<prop key="admin/users/alert.form">alertForm</prop>
-				<prop key="admin/users/privilege.list">privilegeList</prop>
-				<prop key="admin/users/privilege.form">privilegeForm</prop>
-
+		
 				<prop key="admin/encounters/encounter.form">encounterForm</prop>
 				<prop key="admin/encounters/encounterType.list">encounterTypeList</prop>
 				<prop key="admin/encounters/encounterType.form">encounterTypeForm</prop>
@@ -409,62 +402,6 @@
 	<!-- ** /Add Person ** -->
 
 	<!-- ====== /Person Sector ====== -->
-
-
-	<!-- =========================== -->
-	<!-- ======  User Sector  ====== -->
-	<!-- =========================== -->
-
-	<!-- ** Role  ** -->
-	<bean id="roleList" class="org.openmrs.web.controller.user.RoleListController">
-		<property name="commandName"><value>roleList</value></property>
-		<property name="formView"><value>/admin/users/roleList</value></property>
-		<property name="successView"><value>role.list</value></property>
-	</bean>
-
-	<!--  Form Controller for the add/edit role page -->
-	<bean id="roleForm" class="org.openmrs.web.controller.user.RoleFormController">
-		<property name="commandName"><value>role</value></property>
-		<property name="validator">
-			<ref bean="roleValidator" />
-		</property>
-		<property name="formView"><value>/admin/users/roleForm</value></property>
-		<property name="successView"><value>role.list</value></property>
-	</bean>
-	<!--  ** /Role ** -->
-	<!-- ** Privilege  ** -->
-	<bean id="privilegeList" class="org.openmrs.web.controller.user.PrivilegeListController">
-		<property name="commandName"><value>privilegeList</value></property>
-		<property name="formView"><value>/admin/users/privilegeList</value></property>
-		<property name="successView"><value>privilege.list</value></property>
-	</bean>
-
-	<!--  Form Controller for the add/edit privilege page -->
-	<bean id="privilegeForm" class="org.openmrs.web.controller.user.PrivilegeFormController">
-		<property name="commandName"><value>privilege</value></property>
-		<property name="validator">
-			<ref bean="privilegeValidator" />
-		</property>
-		<property name="formView"><value>/admin/users/privilegeForm</value></property>
-		<property name="successView"><value>privilege.list</value></property>
-	</bean>
-	<!--  ** /Privilege ** -->
-
-	<!-- ** Alert  ** -->
-	<bean id="alertList" class="org.openmrs.notification.web.controller.AlertListController">
-		<property name="commandName"><value>alertList</value></property>
-		<property name="formView"><value>/admin/users/alertList</value></property>
-		<property name="successView"><value>alert.list</value></property>
-	</bean>
-
-	<bean id="alertForm" class="org.openmrs.notification.web.controller.AlertFormController">
-		<property name="commandName"><value>alert</value></property>
-		<property name="formView"><value>/admin/users/alertForm</value></property>
-		<property name="successView"><value>alert.list</value></property>
-	</bean>
-	<!--  ** /Alert ** -->
-
-	<!-- ====== /User Sector ====== -->
 
 	<!-- ============================ -->
 	<!-- ===== Encounter Sector ===== -->
