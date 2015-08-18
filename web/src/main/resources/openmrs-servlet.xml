@@ -148,7 +148,6 @@
 				<prop key="admin/person/relationshipType.form">relationshipTypeForm</prop>
 				<prop key="admin/person/relationshipTypeViews.form">relationshipTypeViewForm</prop>
 				<prop key="admin/person/personAttributeType.form">personAttributeTypeForm</prop>
-				<prop key="admin/person/addPerson.htm">addPerson</prop>
 
 				<prop key="admin/observations/obs.form">obsForm</prop>
 				<prop key="admin/observations/personObs.form">personObsForm</prop>
@@ -332,15 +331,6 @@
 		<property name="validator"><ref bean="personAttributeTypeValidator" /></property>
 	</bean>
 	<!-- ** /PersonAttribute Type   ** -->
-
-	<!-- ** Add Person ** -->
-	<!--  Used for finding duplicate patients / users -->
-	<bean id="addPerson" class="org.openmrs.web.controller.person.AddPersonController">
-		<property name="commandName"><value>people</value></property>
-		<property name="formView"><value>/admin/person/addPerson</value></property>
-		<property name="successView"><value>admin/person/newPerson.form</value></property>
-	</bean>
-	<!-- ** /Add Person ** -->
 
 	<!-- ====== /Person Sector ====== -->
 
