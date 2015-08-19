@@ -143,12 +143,6 @@
 		<property name="order"><value>99</value></property>
 		<property name="mappings">
 			<props>				
-				<prop key="admin/person/person.form">personForm</prop>
-				<prop key="admin/person/relationshipType.list">relationshipTypeList</prop>
-				<prop key="admin/person/relationshipType.form">relationshipTypeForm</prop>
-				<prop key="admin/person/relationshipTypeViews.form">relationshipTypeViewForm</prop>
-				<prop key="admin/person/personAttributeType.form">personAttributeTypeForm</prop>
-
 				<prop key="admin/observations/obs.form">obsForm</prop>
 				<prop key="admin/observations/personObs.form">personObsForm</prop>
 		
@@ -179,7 +173,6 @@
 				<prop key="admin/hl7/hl7Source.form">hl7SourceForm</prop>
 
 				<prop key="options.form">optionsForm</prop>
-				<prop key="personDashboard.form">personDashboardForm</prop>
 
 				<prop key="admin/forms/formSchemaDesign.form">formSchemaDesignForm</prop>
 				<prop key="admin/forms/formEdit.form">formEditForm</prop>
@@ -289,51 +282,7 @@
    	<!-- ====== /Observation Sector ====== -->
 
 	<!--this is the optional method of declaring values in the constructor-->
-
-	<!-- ============================= -->
-	<!-- ======  Person Sector  ====== -->
-	<!-- ============================= -->
-	<!-- ** Person ** -->
-	<bean id="personForm" class="org.openmrs.web.controller.person.PersonFormController">
-		<property name="commandName"><value>person</value></property>
-		<property name="formView"><value>/admin/person/personForm</value></property>
-		<property name="successView"><value>person.form</value></property>
-		<property name="validator"><ref bean="personValidator" /></property>
-	</bean>
-	<!-- ** /Person ** -->
 	
-	<!-- **  Relationship Type   ** -->
-	<bean id="relationshipTypeList"
-		class="org.openmrs.web.controller.person.RelationshipTypeListController">
-		<property name="commandName"><value>relationshipTypeList</value></property>
-		<property name="formView"><value>/admin/person/relationshipTypeList</value></property>
-		<property name="successView"><value>relationshipType.list</value></property>
-	</bean>
-	<bean id="relationshipTypeForm"
-		class="org.openmrs.web.controller.person.RelationshipTypeFormController">
-		<property name="commandName"><value>relationshipType</value></property>
-		<property name="formView"><value>/admin/person/relationshipTypeForm</value></property>
-		<property name="successView"><value>relationshipType.list</value></property>
-	</bean>
-	<bean id="relationshipTypeViewForm"
-		class="org.openmrs.web.controller.person.RelationshipTypeViewFormController">
-		<property name="commandName"><value>relationshipTypeList</value></property>
-		<property name="formView"><value>/admin/person/relationshipTypeViewForm</value></property>
-		<property name="successView"><value>relationshipType.list</value></property>
-	</bean>
-	<!-- ** /Relationship Type   ** -->
-
-	<bean id="personAttributeTypeForm"
-		class="org.openmrs.web.controller.person.PersonAttributeTypeFormController">
-		<property name="commandName"><value>personAttributeType</value></property>
-		<property name="formView"><value>/admin/person/personAttributeTypeForm</value></property>
-		<property name="successView"><value>personAttributeType.list</value></property>
-		<property name="validator"><ref bean="personAttributeTypeValidator" /></property>
-	</bean>
-	<!-- ** /PersonAttribute Type   ** -->
-
-	<!-- ====== /Person Sector ====== -->
-
 	<!-- ============================ -->
 	<!-- ===== Encounter Sector ===== -->
 	<!-- ============================ -->
@@ -677,12 +626,6 @@
 		<property name="commandClass"><value>org.openmrs.web.OptionsForm</value></property>
 		<property name="formView"><value>/optionsForm</value></property>
 		<property name="successView"><value>options.form</value></property>
-	</bean>
-	<bean id="personDashboardForm"
-		class="org.openmrs.web.controller.person.PersonDashboardController">
-		<property name="commandName"><value>person</value></property>
-		<property name="formView"><value>/personDashboardForm</value></property>
-		<property name="successView"><value>personDashboard.form</value></property>
 	</bean>
 	<bean id="globalPropertyController"
 		class="org.openmrs.web.controller.maintenance.GlobalPropertyController">
